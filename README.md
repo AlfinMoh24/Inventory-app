@@ -175,7 +175,7 @@ Semua response dalam format JSON.
 
 ## 📄 Dokumentasi Postman
 
-[👉 Klik di sini untuk Dokumentasi API Postman](https://www.postman.com/yourusername/workspace/inventory-app/collection/12345678-abcdef)
+[👉 Klik di sini untuk Dokumentasi API Postman](https://documenter.getpostman.com/view/17855264/2sB2xFdnHY)
 
 ---
 
