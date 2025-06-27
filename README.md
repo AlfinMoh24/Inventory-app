@@ -126,7 +126,7 @@ Semua endpoint API menggunakan **Bearer Token**.
 Untuk mendapatkan token, lakukan login:
 
 ```
-POST /api/login
+POST /api/auth/login
 ```
 
 Body:
@@ -158,7 +158,7 @@ Authorization: Bearer YOUR_TOKEN_HERE
 
 | Endpoint                               | Method | Keterangan                         |
 |----------------------------------------|--------|------------------------------------|
-| /api/login                             | POST   | Login & generate token             |
+| /api/auth/login                             | POST   | Login & generate token             |
 | /api/users                             | GET    | List Users                         |
 | /api/users                             | POST   | Create User                        |
 | /api/users/{id}                        | PUT    | Update User                        |
