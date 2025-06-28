@@ -61,7 +61,19 @@ docker-compose exec app php artisan key:generate
 docker-compose exec app php artisan migrate
 ```
 
-7. Akses API
+7. Jalankan Seeder (Opsional)
+
+```bash
+docker-compose exec app php artisan db:seed
+```
+
+atau
+
+```bash
+docker-compose exec app php artisan migrate:fresh --seed
+```
+
+8. Akses API
 
 Buka browser atau Postman:
 
@@ -107,7 +119,20 @@ php artisan migrate
 php artisan serve
 ```
 
-6. Jalankan aplikasi di:
+6. Jalankan Seeder
+
+```bash
+php artisan db:seed
+```
+
+atau
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+
+7. Jalankan aplikasi di:
 
 ```bash
 http://127.0.0.1:8000/
