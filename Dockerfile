@@ -10,7 +10,6 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql zip
 
-
 # Aktifkan mod_rewrite Apache
 RUN a2enmod rewrite
 
@@ -29,8 +28,13 @@ RUN chown -R www-data:www-data storage bootstrap/cache \
 # Jalankan Composer install
 RUN composer install --no-dev --optimize-autoloader
 
-# Apache virtual host
+# Salin vhost
 COPY ./docker/vhost.conf /etc/apache2/sites-available/000-default.conf
 
-# Jalankan Apache
-CMD ["apache2-foreground"]
+# Salin entrypoint.sh
+COPY ./docker/entrypoint.sh /entrypoint.sh
+
+# Beri permission
+RUN chmod +x /entrypoint.sh
+
+CMD ["/entrypoint.sh"]

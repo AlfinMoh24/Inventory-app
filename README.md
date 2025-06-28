@@ -48,25 +48,8 @@ DB_PASSWORD=secret
 ```bash
 docker-compose up -d --build
 ```
-5. Install Composer
 
-```bash
-docker-compose exec app composer install --no-dev
-```
-
-5. Generate APP_KEY
-
-```bash
-docker-compose exec app php artisan key:generate
-```
-
-6. Jalankan Migrasi
-
-```bash
-docker-compose exec app php artisan migrate
-```
-
-7. Jalankan Seeder (Opsional)
+5. Jalankan Seeder (Opsional)
 
 ```bash
 docker-compose exec app php artisan db:seed
@@ -78,7 +61,7 @@ atau
 docker-compose exec app php artisan migrate:fresh --seed
 ```
 
-8. Akses API
+6. Akses API
 
 Buka browser atau Postman:
 
