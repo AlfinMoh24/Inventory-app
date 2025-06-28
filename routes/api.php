@@ -17,13 +17,11 @@ Route::prefix('auth')->group(function () {
 });
 
 Route::middleware(['auth:sanctum', 'throttle:60,1'])->group(function () {
-
-
-        // 📦 Resource: Produk, Lokasi, Produk-Lokasi, Mutasi
-        Route::apiResource('user', UserController::class)->only(['index', 'show', 'update', 'destroy']);
-        Route::apiResource('produk', ProdukController::class);
-        Route::apiResource('lokasi', LokasiController::class);
-        Route::apiResource('produk-lokasi', ProdukLokasiController::class);
-        Route::apiResource('mutasi', MutasiController::class);
-    });
+    // Resource: Produk, Lokasi, Produk-Lokasi, Mutasi
+    Route::apiResource('user', UserController::class)->only(['index', 'show', 'update', 'destroy']);
+    Route::apiResource('produk', ProdukController::class);
+    Route::apiResource('lokasi', LokasiController::class);
+    Route::apiResource('produk-lokasi', ProdukLokasiController::class);
+    Route::apiResource('mutasi', MutasiController::class);
+});
 

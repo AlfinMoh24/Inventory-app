@@ -16,7 +16,7 @@ Tes Seleksi Software Engineer
 
 ## 📦 Tech Stack
 
-- Laravel 11
+- Laravel 12
 - MySQL 8
 - Docker
 - Laravel Sanctum (untuk autentikasi token)
@@ -32,7 +32,7 @@ Tes Seleksi Software Engineer
 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/inventory-app.git
+git clone https://github.com/AlfinMoh24/Inventory-app.git
 cd inventory-app
 ```
 
@@ -191,8 +191,6 @@ Berikut adalah daftar endpoint API pada aplikasi Inventory App, **menggunakan La
 | /api/mutasi/{id}                          | GET    | Detail mutasi                              |
 | /api/mutasi/{id}                          | PUT    | Update mutasi                              |
 | /api/mutasi/{id}                          | DELETE | Delete mutasi                              |
-| /api/produk/{id}/mutasi                   | GET    | History mutasi untuk produk tertentu       |
-| /api/users/{id}/mutasi                    | GET    | History mutasi untuk user tertentu         |
 
 
 Semua response dalam format JSON.
