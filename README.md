@@ -46,7 +46,7 @@ DB_PASSWORD=secret
 4. Build & Jalankan Docker
 
 ```bash
-docker-compose up -d --build
+docker-compose up --build
 ```
 
 5. Jalankan Seeder (Opsional)
