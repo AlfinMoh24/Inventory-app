@@ -48,6 +48,11 @@ DB_PASSWORD=secret
 ```bash
 docker-compose up -d --build
 ```
+5. Install Composer
+
+```bash
+docker-compose exec app composer install --no-dev
+```
 
 5. Generate APP_KEY
 
