@@ -107,6 +107,15 @@ php artisan key:generate
 
 4. Edit konfigurasi database di file `.env` sesuai koneksi lokal MySQL anda.
 
+```bash
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=inventory_app
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
 5. Jalankan migrasi:
 
 ```bash
@@ -155,7 +164,7 @@ Body:
 ```json
 {
   "email": "user@example.com",
-  "password": "password"
+  "password": "12345678"
 }
 ```
 
