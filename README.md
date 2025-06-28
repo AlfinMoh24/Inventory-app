@@ -27,7 +27,7 @@ Tes Seleksi Software Engineer
 
 ## 🚀 Cara Install & Jalankan Project
 
-### Jalankan dengan Docker (Direkomendasikan)
+### Jalankan dengan Docker
 
 1. Clone Repository
 
@@ -81,7 +81,7 @@ http://localhost:8000
 
 ---
 
-### Jalankan Tanpa Docker (Opsional)
+### Jalankan Tanpa Docker
 
 Jika tidak menggunakan Docker, jalankan langkah-langkah berikut:
 
@@ -103,7 +103,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-4. Edit konfigurasi database di file `.env` sesuai koneksi lokal MySQL kamu.
+4. Edit konfigurasi database di file `.env` sesuai koneksi lokal MySQL anda.
 
 5. Jalankan migrasi:
 
@@ -115,6 +115,12 @@ php artisan migrate
 
 ```bash
 php artisan serve
+```
+
+6. Jalankan aplikasi di:
+
+```bash
+http://127.0.0.1:8000/
 ```
 
 ---
@@ -156,18 +162,38 @@ Authorization: Bearer YOUR_TOKEN_HERE
 
 ## 🛠️ API Endpoints
 
-| Endpoint                               | Method | Keterangan                         |
-|----------------------------------------|--------|------------------------------------|
-| /api/auth/login                             | POST   | Login & generate token             |
-| /api/users                             | GET    | List Users                         |
-| /api/users                             | POST   | Create User                        |
-| /api/users/{id}                        | PUT    | Update User                        |
-| /api/users/{id}                        | DELETE | Delete User                        |
-| /api/produk                            | CRUD   | CRUD Produk                        |
-| /api/lokasi                            | CRUD   | CRUD Lokasi                        |
-| /api/mutasi                            | CRUD   | CRUD Mutasi                        |
-| /api/produk/{id}/mutasi                | GET    | History Mutasi per Produk          |
-| /api/users/{id}/mutasi                 | GET    | History Mutasi per User            |
+# Inventory App API
+
+Berikut adalah daftar endpoint API pada aplikasi Inventory App, **menggunakan Laravel**. Semua endpoint menggunakan autentikasi Bearer Token (kecuali login dan register).
+
+| Endpoint                                  | Method | Keterangan                                 |
+|-------------------------------------------|--------|--------------------------------------------|
+| /api/auth/login                           | POST   | Login & generate token                     |
+| /api/auth/logout                          | POST   | Logout user (wajib kirim bearer token)     |
+| /api/auth/register                        | POST   | Register user baru                         |
+| /api/user                                 | GET    | Mendapatkan data user yang sedang login    |
+| /api/users                                | GET    | List semua user                            |
+| /api/users                                | POST   | Create user                                |
+| /api/users/{id}                           | PUT    | Update user                                |
+| /api/users/{id}                           | DELETE | Delete user                                |
+| /api/produk                               | GET    | List semua produk                          |
+| /api/produk                               | POST   | Create produk                              |
+| /api/produk/{id}                          | GET    | Detail produk                              |
+| /api/produk/{id}                          | PUT    | Update produk                              |
+| /api/produk/{id}                          | DELETE | Delete produk                              |
+| /api/lokasi                               | GET    | List semua lokasi                          |
+| /api/lokasi                               | POST   | Create lokasi                              |
+| /api/lokasi/{id}                          | GET    | Detail lokasi                              |
+| /api/lokasi/{id}                          | PUT    | Update lokasi                              |
+| /api/lokasi/{id}                          | DELETE | Delete lokasi                              |
+| /api/mutasi                               | GET    | List semua mutasi                          |
+| /api/mutasi                               | POST   | Create mutasi                              |
+| /api/mutasi/{id}                          | GET    | Detail mutasi                              |
+| /api/mutasi/{id}                          | PUT    | Update mutasi                              |
+| /api/mutasi/{id}                          | DELETE | Delete mutasi                              |
+| /api/produk/{id}/mutasi                   | GET    | History mutasi untuk produk tertentu       |
+| /api/users/{id}/mutasi                    | GET    | History mutasi untuk user tertentu         |
+
 
 Semua response dalam format JSON.
 
@@ -181,7 +207,6 @@ Semua response dalam format JSON.
 
 ## 👨‍💻 Author
 
-- Nama: Your Name
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
+- Nama: MOH ALFIN
+- Email: alfinmoh24@gmail.com
 
